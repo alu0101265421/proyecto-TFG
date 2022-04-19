@@ -1,0 +1,24 @@
+<h1>Proyecto TFG</h1>
+
+
+<div class="link">
+    
+    <mat-form-field>
+      <input matInput [(ngModel)]="direccion" type="url" placeholder="Ingrese url">
+    </mat-form-field>
+    
+    <button mat-raised-button color="accent" (click)="introducirUrl()">Introducir</button>
+
+    <button mat-raised-button color="accent" (click)="buscarID()">ID resultados</button>
+    
+</div>
+
+<div>
+<h2>{{titulo2}}</h2>
+<ul>
+  <li *ngFor="let guia of guias"> 
+    {{guia.name}}
+  </li>
+</ul>
+
+</div>
