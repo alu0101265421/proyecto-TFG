@@ -1,24 +1,64 @@
-<h1>Proyecto TFG</h1>
-
+<h1>Validador</h1>
+<h3>Se trata de una validador de accesibilidad etc...</h3>
 
 <div class="link">
-    
-    <mat-form-field>
-      <input matInput [(ngModel)]="direccion" type="url" placeholder="Ingrese url">
-    </mat-form-field>
-    
-    <button mat-raised-button color="accent" (click)="introducirUrl()">Introducir</button>
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="direccion"
+      type="url"
+      placeholder="Ingrese url"
+    />
+  </mat-form-field>
 
-    <button mat-raised-button color="accent" (click)="buscarID()">ID resultados</button>
-    
+  <button mat-raised-button color="accent" (click)="introducirUrl()">
+    Validar Accesibilidad
+  </button>
+
+  <!-- <button mat-raised-button color="accent" (click)="buscarID()">
+    ID resultados
+  </button>-->
 </div>
 
-<div>
-<h2>{{titulo2}}</h2>
-<ul>
-  <li *ngFor="let guia of guias"> 
-    {{guia.name}}
-  </li>
-</ul>
+<!-- <div>
+  <h2>{{ titulo2 }}</h2>
+  <ul>
+    <li *ngFor="let guia of guias">
+      {{ guia.name }}
+    </li>
+  </ul>
+</div> -->
 
+<div class="Criterios">
+  <div>
+    <div>Errores</div>
+    <p>Descripción</p>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> TITULO 1 </mat-panel-title>
+        <mat-panel-description>
+          Currently I am {{ panelOpenState ? "open" : "closed" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> 1.1.1 Criterio </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{ panelOpenState ? "open" : "closed" }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
