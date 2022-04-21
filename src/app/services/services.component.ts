@@ -41,6 +41,7 @@ export interface Category {
   providedIn: 'root',
 })
 export class ServicesComponent {
+  [x: string]: any;
   apiKey: string = 'GAUF5e4a2782';
   URL_base: string = 'https://wave.webaim.org/api';
   constructor(private http: HttpClient) {}

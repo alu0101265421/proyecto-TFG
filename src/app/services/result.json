@@ -17,7 +17,11 @@
         }
       }
     },
-
+    "contrast": {
+      "description": "Contrast Errors",
+      "count": 0,
+      "items": []
+    },
     "alert": {
       "description": "Alerts",
       "count": 12,
@@ -57,6 +61,95 @@
           "id": "accesskey",
           "description": "Accesskey",
           "count": 1
+        }
+      }
+    },
+    "feature": {
+      "description": "Features",
+      "count": 4,
+      "items": {
+        "alt_link": {
+          "id": "alt_link",
+          "description": "Linked image with alternative text",
+          "count": 3
+        },
+        "lang": {
+          "id": "lang",
+          "description": "Language",
+          "count": 1,
+          "selectors": [false]
+        }
+      }
+    },
+    "structure": {
+      "description": "Structural Elements",
+      "count": 47,
+      "items": {
+        "h2": {
+          "id": "h2",
+          "description": "Heading level 2",
+          "count": 1
+        },
+        "h3": {
+          "id": "h3",
+          "description": "Heading level 3",
+          "count": 12
+        },
+        "h4": {
+          "id": "h4",
+          "description": "Heading level 4",
+          "count": 1
+        },
+        "h5": {
+          "id": "h5",
+          "description": "Heading level 5",
+          "count": 13
+        },
+        "ul": {
+          "id": "ul",
+          "description": "Unordered list",
+          "count": 17
+        },
+        "nav": {
+          "id": "nav",
+          "description": "Navigation",
+          "count": 1
+        },
+        "search": {
+          "id": "search",
+          "description": "Search",
+          "count": 1
+        },
+        "footer": {
+          "id": "footer",
+          "description": "Footer",
+          "count": 1
+        }
+      }
+    },
+    "aria": {
+      "description": "ARIA",
+      "count": 30,
+      "items": {
+        "aria_label": {
+          "id": "aria_label",
+          "description": "ARIA label",
+          "count": 10
+        },
+        "aria_tabindex": {
+          "id": "aria_tabindex",
+          "description": "ARIA tabindex",
+          "count": 2
+        },
+        "aria_button": {
+          "id": "aria_button",
+          "description": "ARIA button",
+          "count": 9
+        },
+        "aria_hidden": {
+          "id": "aria_hidden",
+          "description": "ARIA hidden",
+          "count": 9
         }
       }
     }
