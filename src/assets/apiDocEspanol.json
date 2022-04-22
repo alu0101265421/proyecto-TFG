@@ -1,7 +1,157 @@
 {
   "1.1.1": {
     "id": "1.1.1",
-    "title": "1.1.1 Non-text Content (Level A)",
+    "title": "1.1.1 Contenido sin texto (Nivel A)",
+    "descripcion": "El contenido no textual que se presenta al usuario tiene una alternativa textual que cumple el propósito equivalente.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content"
+  },
+  "1.2.1": {
+    "id": "1.2.1",
+    "title": "1.2.1 Solo audio y video pregrabado (Nivel A)",
+    "descripcion": "Para el audio y video pregrabado se proporciona una alternativa para los medios basados en el tiempo que presenta información equivalente sobre el contenido. Además, para el video se puede proporcionar una pista de audio.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded"
+  },
+  "1.2.2": {
+    "id": "1.2.2",
+    "title": "1.2.2 Subtítulos (Pregrabado) (Nivel A)",
+    "descripcion": "Se proporcionan subtitulos para todos los contenidos de audio pregrabados en medios sincronizados, excepto cuando los medios son una alternativa al texto.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded"
+  },
+  "1.2.3": {
+    "id": "1.2.3",
+    "title": "1.2.3 Descripción de audio o alternativa de medios (Pregrabado) (Nivel A)",
+    "descripcion": "Se proporciona una alternativa para los medios basados en el tiempo o la descripción de audio del contenido de vídeo pregrabado, excepto cuando los medios son una alternativa para el texto.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded"
+  },
+  "1.2.5": {
+    "id": "1.2.5",
+    "title": "1.2.5 Descripción de audio (Pregrabado) (Nivel AA)",
+    "descripcion": "La descripcion del audio se debe ofrecer para todos el contenido de videos pregrabados.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded"
+  },
+  "1.3.1": {
+    "id": "1.3.1",
+    "title": "1.3.1 Información y Relaciones (Nivel A)",
+    "descripcion": " La información, la estructura y las relaciones que se transmiten a través de la presentación deben determinarse de forma programada o estar disponibles en el texto.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships"
+  },
+  "1.3.2": {
+    "id": "1.3.2",
+    "title": "1.3.2 Secuencia significativa (Nivel A)",
+    "descripcion": "Si la secuencia en la que se presenta el contenido afecta al significado de este, se puede determinar de manera programada una secuencia de lectura correcta.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence"
+  },
+  "1.4.2": {
+    "id": "1.4.2",
+    "title": "1.4.2 Control de sonido (Nivel A)",
+    "descripcion": "Si el audio de una página web se reproduce automáticamente durante más de 3 segundos, existe un mecanismo para pausar o detener el audio, o un mecanismo para controlar el volumen del audio independientemente del nivel de volumen general del sistema.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/audio-control"
+  },
+  "1.4.3": {
+    "id": "1.4.3",
+    "title": "1.4.3 Contraste (Minimo) (Nivel AA)",
+    "descripcion": "La presentación visual del texto y de las imágenes del texto tiene una relación de contraste de al menos 4,5:1, excepto textos grandes y logotipos.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum"
+  },
+  "2.1.1": {
+    "id": "2.1.1",
+    "title": "2.1.1 Teclado (Nivel A)",
+    "descripcion": "La funcionalidad del contenido es operable a través de una interfaz de teclado sin requerir tiempos específicos para las pulsaciones individuales, excepto cuando se requiere una entrada que depende de la trayectoria del movimiento del usuario y no sólo de los puntos finales.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/keyboard"
+  },
+  "2.1.2": {
+    "id": "2.1.2",
+    "title": "2.1.2 Sin trampa de teclado (Nivel A)",
+    "descripcion": "Si el foco del teclado se puede mover a un componente de la página utilizando una interfaz de teclado, entonces el foco se puede alejar de ese componente utilizando sólo una interfaz de teclado. Si requiere más que las teclas de flecha o de tabulación no modificadas u otros métodos de salida estándar, se avisa al usuario del método para alejar el foco.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap"
+  },
+  "2.2.1": {
+    "id": "2.2.1",
+    "title": "2.2.1 Tiempo ajustable (Nivel A)",
+    "descripcion": "FALTA DESCRIPCIÓN",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable"
+  },
+  "2.2.2": {
+    "id": "2.2.2",
+    "title": "2.2.2 Pausa, Detener, Ocultar (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "2.4.1": {
+    "id": "2.4.1",
+    "title": "2.4.1 Bloques de derivación (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "2.4.2": {
+    "id": "2.4.2",
+    "title": "2.4.2 Página titulada (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "2.4.3": {
+    "id": "2.4.3",
+    "title": "2.4.3 Orden de enfoque (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "2.4.4": {
+    "id": "2.4.4",
+    "title": "2.4.4 Propósito del enlace (En contexto) (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "2.4.6": {
+    "id": "2.4.6",
+    "title": "2.4.6 Encabezados y etiquetas (Nivel AA)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "2.5.3": {
+    "id": "2.5.3",
+    "title": "2.5.3 Etique en nombre (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "3.1.1": {
+    "id": "3.1.1",
+    "title": "3.1.1 Idioma de la página (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "3.1.2": {
+    "id": "3.1.2",
+    "title": "3.1.2 Idioma de las partes (Nivel AA)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "3.2.2": {
+    "id": "3.2.2",
+    "title": "3.2.2 En la entrada (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "3.3.1": {
+    "id": "3.3.1",
+    "title": "3.3.1 Error de identificación  (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "3.3.2": {
+    "id": "3.3.2",
+    "title": "3.3.2 Etiquetas o instrucciones (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "4.1.2": {
+    "id": "4.1.2",
+    "title": "4.1.2 Nombre, Rol, Valor (Nivel A)",
+    "descripcion": "descripcion",
+    "link": "http://"
+  },
+  "4.1.3": {
+    "id": "4.1.3",
+    "title": "4.1.3 Mensajes de estado (Nivel AA)",
     "descripcion": "descripcion",
     "link": "http://"
   }
