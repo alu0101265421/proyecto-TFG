@@ -68,91 +68,91 @@
   "2.2.1": {
     "id": "2.2.1",
     "title": "2.2.1 Tiempo ajustable (Nivel A)",
-    "descripcion": "FALTA DESCRIPCIÓN",
+    "descripcion": "El usuario puede interactuar con el contenido dependiendo del límite que tenga establecido (apagar, ajustar, extender, excepción en tiempo real, excepción esencial, excepción de 20 horas.)",
     "link": "https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable"
   },
   "2.2.2": {
     "id": "2.2.2",
     "title": "2.2.2 Pausa, Detener, Ocultar (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Para cualquier información que se mueva, parpadee o se desplace automáticamente, dure más de cinco segundos y se presente en paralelo con otro contenido, existe un mecanismo para que el usuario pause, detenga u oculte a menos que el movimiento, parpadeo o desplazamiento sea parte de una actividad en la que sea esencial. Lo mismo ocurren con la actualización automática de la información.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide"
   },
   "2.4.1": {
     "id": "2.4.1",
     "title": "2.4.1 Bloques de derivación (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Se trata de un mecanismo para omitir bloques de contneido que se repiten en varias páginas web.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks"
   },
   "2.4.2": {
     "id": "2.4.2",
     "title": "2.4.2 Página titulada (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Los títulos de las páginas deben describir el tema o el propósito.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/page-titled"
   },
   "2.4.3": {
     "id": "2.4.3",
     "title": "2.4.3 Orden de enfoque (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Si la página web puede ser navegada secuencialmente y las secuencias de navegación afectan al significado o al funcionamiento, los componentes reciben el foco en un orden que preserva el significado y la operatividad.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/focus-order"
   },
   "2.4.4": {
     "id": "2.4.4",
     "title": "2.4.4 Propósito del enlace (En contexto) (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "La finalidad de cada enlace puede determinarse a partir del texto del enlace por sí solo o del texto del enlace junto con su contexto de enlace determinado mediante programación, excepto cuando la finalidad del enlace sea ambigua para los usuarios.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context"
   },
   "2.4.6": {
     "id": "2.4.6",
     "title": "2.4.6 Encabezados y etiquetas (Nivel AA)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Estos deben describir el tema o el propósito.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels"
   },
   "2.5.3": {
     "id": "2.5.3",
-    "title": "2.5.3 Etique en nombre (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "title": "2.5.3 Etiqueta en el nombre (Nivel A)",
+    "descripcion": "Para los componentes de la interfaz de usuario con etiquetas que incluyen texto o imágenes de texto, el nombre contiene el texto que se presenta visualmente.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name"
   },
   "3.1.1": {
     "id": "3.1.1",
     "title": "3.1.1 Idioma de la página (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "El idioma por defecto de cada página web puede determinarse mediante programación.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page"
   },
   "3.1.2": {
     "id": "3.1.2",
     "title": "3.1.2 Idioma de las partes (Nivel AA)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "El lenguaje de cada frase del contenido puede determinarse de forma programada, excepto los nombres propios, los términos técnicos, las palabras de lenguaje indeterminado y las palabras o frases que han pasado a formar parte de la lengua nativa del texto.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts"
   },
   "3.2.2": {
     "id": "3.2.2",
     "title": "3.2.2 En la entrada (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "El cambio de la configuración de cualquier componente de la interfaz de usuario no provoca un cambio de contexto automáticamente, a menos que el usuario haya sido advertido del comportamiento antes de utilizarlo.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/on-input"
   },
   "3.3.1": {
     "id": "3.3.1",
-    "title": "3.3.1 Error de identificación  (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "title": "3.3.1 Error de identificación (Nivel A)",
+    "descripcion": "Si se detecta automáticamente un error de entrada, se identifica el elemento que está en error y se describe el error al usuario en texto.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/error-identification"
   },
   "3.3.2": {
     "id": "3.3.2",
     "title": "3.3.2 Etiquetas o instrucciones (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Estas se proporcionan cuando el contenido requiere la intervención del usuario.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions"
   },
   "4.1.2": {
     "id": "4.1.2",
     "title": "4.1.2 Nombre, Rol, Valor (Nivel A)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "Para todos los componentes de la interfaz de usuario, el nombre y la función pueden determinarse mediante programación; los estados, las propiedades y los valores que puede establecer el usuario pueden establecerse mediante programación; y la notificación de los cambios en estos elementos está disponible para los agentes de usuario. ",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value"
   },
   "4.1.3": {
     "id": "4.1.3",
     "title": "4.1.3 Mensajes de estado (Nivel AA)",
-    "descripcion": "descripcion",
-    "link": "http://"
+    "descripcion": "En los contenidos implementados mediante lenguajes de marcado, los mensajes de estado pueden determinarse mediante programación a través de funciones o propiedades, de manera que puedan ser presentados al usuario por las tecnologías de asistencia sin recibir el foco.",
+    "link": "https://www.w3.org/WAI/WCAG21/Understanding/status-messages"
   }
 }
