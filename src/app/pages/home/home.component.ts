@@ -14,4 +14,20 @@ export class HomeComponent implements OnInit {
   irValidador() {
     this.router.navigateByUrl('validador');
   }
+
+  irEstadisticas() {
+    this.router.navigateByUrl('estadisticas');
+  }
+  irAccesibilidad() {
+    this.router.navigateByUrl('accesibilidad');
+  }
+  irUsabilidad() {
+    this.router.navigateByUrl('usabilidad');
+  }
+  irUX() {
+    this.router.navigateByUrl('ux');
+  }
+  irQuienSoy() {
+    this.router.navigateByUrl('quiensoy');
+  }
 }

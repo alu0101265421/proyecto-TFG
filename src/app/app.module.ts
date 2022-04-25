@@ -14,9 +14,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
+import { AccesibilidadComponent } from './pages/accesibilidad/accesibilidad.component';
+import { UsabilidadComponent } from './pages/usabilidad/usabilidad.component';
+import { UxComponent } from './pages/ux/ux.component';
+import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
 
 @NgModule({
-  declarations: [AppComponent, ApiComponenteComponent, HomeComponent],
+  declarations: [AppComponent, ApiComponenteComponent, HomeComponent, EstadisticasComponent, AccesibilidadComponent, UsabilidadComponent, UxComponent, QuiensoyComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

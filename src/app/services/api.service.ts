@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom, map, take } from 'rxjs';
 import result from './result.json';
+import apiDocs from '../../assets/apiDocs.json';
+import apiDocsEspanol from '../../assets/apiDocEspanol.json';
 
 export interface IAnalisisResult {
   categories: {
@@ -58,17 +60,20 @@ export interface ICriterio {
 export class ApiService {
   API_KEY: string = 'GAUF5e4a2782';
   URL_BASE: string = 'https://wave.webaim.org/api';
+
+  private pautasDocEs: ICriterio[] = [];
+
   constructor(private http: HttpClient) {}
 
   analizarWeb(url: string): Promise<IAnalisisResult> | null {
     try {
-      // return lastValueFrom(
-      //   this.http
-      //     .get<IAnalisisResult>(
-      //       `${this.URL_BASE}/request?key=${this.API_KEY}&reporttype=2&url=${url}`
-      //     )
-      //     .pipe(take(1))
-      // );
+      /*        return lastValueFrom(
+         this.http
+           .get<IAnalisisResult>(
+             `${this.URL_BASE}/request?key=${this.API_KEY}&reporttype=2&url=${url}`
+           )
+           .pipe(take(1))
+       ); */
       return Promise.resolve(result as unknown as IAnalisisResult);
     } catch (error) {
       console.error(error);
@@ -87,5 +92,31 @@ export class ApiService {
       console.error(error);
       return null;
     }
+  }
+
+  obtenerID(name: string): string {
+    return name.substring(0, 5);
+  }
+
+  obtenerPautasDeID(id: string) {
+    const resultados = apiDocs.find((result) => result.name === id);
+    if (!resultados) return null;
+
+    const pautasEN = resultados.guidelines;
+    const pautasES = this.traducirDocAEsp(pautasEN);
+    return pautasES;
+  }
+
+  traducirDocAEsp(guidelinesEn: IGuideline[]) {
+    for (let elemento of guidelinesEn) {
+      const idPautaEN = this.obtenerID(elemento.name);
+      if (
+        this.pautasDocEs.includes((apiDocsEspanol as any)[idPautaEN]) == false
+      ) {
+        this.pautasDocEs.push((apiDocsEspanol as any)[idPautaEN]);
+      }
+    }
+
+    return this.pautasDocEs;
   }
 }

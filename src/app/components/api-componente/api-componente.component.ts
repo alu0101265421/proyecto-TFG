@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, ICategoria } from 'src/app/services/api.service';
 import {
-  DocResult,
-  Guideline,
-  ApiResult,
-} from 'src/app/services/services.component';
+  ApiService,
+  IAnalisisResult,
+  ICategoria,
+  IDocResult,
+  IGuideline,
+} from 'src/app/services/api.service';
 import result from '../../services/result.json';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-api-componente',
@@ -15,11 +17,11 @@ import result from '../../services/result.json';
 export class ApiComponenteComponent implements OnInit {
   public direccion: string = '';
 
-  private result!: DocResult | null;
+  private result!: IDocResult | null;
   public titulo2!: string;
-  public guias!: Guideline[];
+  public guias!: IGuideline[];
   public panelOpenState = false;
-  public resultadosAnalisisWeb!: ApiResult | null;
+  public resultadosAnalisisWeb!: IAnalisisResult | null;
   public alerts!: any[];
   public errors!: any[];
   public analisis: ICategoria[] = [];
@@ -37,34 +39,13 @@ export class ApiComponenteComponent implements OnInit {
     if (!this.resultadosAnalisisWeb?.categories) return;
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
-    console.log({ categories });
+    /*     console.log({ categories });
     categories.map((category) => {
       const items = Object.values(category.items);
-    });
-    // const errorItems = Object.values(this.resultadosAnalisisWeb.categories.error.items);
-    // const errorIds = errorItems.map(error => error.id);
+    }); */
 
-    // const alertItems = Object.values(this.resultadosAnalisisWeb.categories.alert.items);
-    // const alertIds = errorItems.map(error => error.id);
-
-    // const errores: ICategoria = {
-    //   tipo: 'ERRORES',
-    //   pautas: [])
-    // }
-    // const alertas: ICategoria = {
-    //   tipo: 'ALERTAS',
-    //   pautas: []
-    // }
-
-    this.errors = Object.values(
-      this.resultadosAnalisisWeb?.categories.error.items
-    );
-    this.alerts = Object.values(
-      this.resultadosAnalisisWeb?.categories.alert.items
-    );
-
-    console.log(this.alerts);
-    console.log(this.errors);
+    const a = this.apiService.obtenerPautasDeID('alt_link_missing');
+    console.log(a);
   }
 
   async buscarID() {
