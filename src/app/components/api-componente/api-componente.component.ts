@@ -26,6 +26,7 @@ export class ApiComponenteComponent implements OnInit {
   public errors!: any[];
   public analisis: ICategoria[] = [];
   public resultadosTraducidos: ICategoria[] = [];
+  public datosInicio!: string;
 
   constructor(private apiService: ApiService) {}
 
@@ -38,6 +39,9 @@ export class ApiComponenteComponent implements OnInit {
       this.direccion
     );
     if (!this.resultadosAnalisisWeb?.categories) return;
+
+    //
+    //this.datosInicio = (this.resultadosAnalisisWeb.statistics as any);
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
     console.log({ categories });
@@ -76,7 +80,7 @@ export class ApiComponenteComponent implements OnInit {
               count: 3
             }
           ]
-      */
+    */
 
     this.resultadosTraducidos = categories.map((category) => {
       const tipo = category.description;

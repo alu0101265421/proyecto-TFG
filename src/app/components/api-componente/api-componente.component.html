@@ -20,42 +20,46 @@
   </button>
 </div>
 
-<div>
-  <h2>{{ titulo2 }}</h2>
+<!-- Poner el pagetittle con el enlace de la parte de analisisweb -->
+<!-- <div>
+  <h2>{{ datosInicio.pagetitle }}</h2>
   <ul>
     <li *ngFor="let guia of guias">
       {{ guia.name }}
     </li>
   </ul>
 </div>
-
+ -->
 <div class="Criterios">
-  <div>
-    <mat-card>
-      <mat-card-title>Errores</mat-card-title>
-      <mat-card-subtitle>Descripcion</mat-card-subtitle>
-    </mat-card>
-  </div>
-  <mat-accordion>
-    <mat-expansion-panel
-      (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false"
-      *ngFor="let alert of alerts"
-    >
-      <mat-expansion-panel-header>
-        <mat-panel-title> {{ alert.id }} </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-accordion>
-        <mat-expansion-panel
-          (opened)="panelOpenState = true"
-          (closed)="panelOpenState = false"
-        >
-          <mat-expansion-panel-header>
-            <mat-panel-title> 1.1.1 Criterio </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>Descripcion de lo que significa el criterio</p>
-        </mat-expansion-panel>
-      </mat-accordion>
-    </mat-expansion-panel>
-  </mat-accordion>
+  <mat-card *ngFor="let object of resultadosTraducidos">
+    <mat-card-title>{{ object.tipo }}</mat-card-title>
+
+    <mat-accordion>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+        *ngFor="let pauta of object.pautas"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{ pauta.titulo }} </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-accordion>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+            *ngFor="let criterio of pauta.criterios"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title> {{ criterio.title }} </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{ criterio.descripcion }}</p>
+            <a mat-raised-button href="{{ criterio.link }}" target="_blank"
+              >Consultar más información</a
+            >
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card>
+  <!--  </mat-card> -->
 </div>

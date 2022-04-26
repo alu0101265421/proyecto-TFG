@@ -42,6 +42,7 @@ export interface IGuideline {
 export interface ICategoria {
   tipo: string;
   pautas: {
+    //id: string;
     titulo: string;
     criterios: ICriterio[];
   }[];
@@ -49,7 +50,7 @@ export interface ICategoria {
 
 export interface ICriterio {
   id: string;
-  titulo: string;
+  title: string;
   descripcion: string;
   link?: string;
 }
@@ -107,6 +108,7 @@ export class ApiService {
     return pautasES;
   }
 
+  //elegir entre una opcion
   traducirDocAEsp(guidelinesEn: IGuideline[]): ICriterio[] {
     this.pautasDocEs = [];
     for (let elemento of guidelinesEn) {
