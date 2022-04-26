@@ -25,6 +25,7 @@ export class ApiComponenteComponent implements OnInit {
   public alerts!: any[];
   public errors!: any[];
   public analisis: ICategoria[] = [];
+  public resultadosTraducidos: ICategoria[] = [];
 
   constructor(private apiService: ApiService) {}
 
@@ -39,13 +40,59 @@ export class ApiComponenteComponent implements OnInit {
     if (!this.resultadosAnalisisWeb?.categories) return;
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
+    console.log({ categories });
+
     /*     console.log({ categories });
     categories.map((category) => {
       const items = Object.values(category.items);
     }); */
 
-    const a = this.apiService.obtenerPautasDeID('alt_link_missing');
-    console.log(a);
+    // category.items:
+    // {
+    //   alt_noseque: {
+    //      id: 'alt_noseque',
+    //      description: 'sfgsf',
+    //      count: 3
+    //   },
+    //   alt_noseque_2: {
+    //      id: 'alt_noseque_2',
+    //      description: 'sfgsf',
+    //      count: 3
+    //   }
+    // },
+
+    /* 
+          Object.value:
+
+          [
+            {
+              id: 'alt_noseque',
+              description: 'sfgsf',
+              count: 3
+            },
+            {
+              id: 'alt_noseque_2',
+              description: 'sfgsf',
+              count: 3
+            }
+          ]
+      */
+
+    this.resultadosTraducidos = categories.map((category) => {
+      const tipo = category.description;
+
+      const items = Object.values(category.items);
+
+      const pautas = items.map((item) => {
+        const id = item.id;
+        const criterios = this.apiService.obtenerPautasDeID(id);
+        return { id, criterios, titulo: item.description };
+      });
+
+      return { tipo, pautas };
+    });
+
+    console.log('===>', this.resultadosTraducidos);
   }
 
   async buscarID() {

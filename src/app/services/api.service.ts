@@ -98,24 +98,30 @@ export class ApiService {
     return name.substring(0, 5);
   }
 
-  obtenerPautasDeID(id: string) {
+  obtenerPautasDeID(id: string): ICriterio[] {
     const resultados = apiDocs.find((result) => result.name === id);
-    if (!resultados) return null;
+    if (!resultados) return [];
 
     const pautasEN = resultados.guidelines;
     const pautasES = this.traducirDocAEsp(pautasEN);
     return pautasES;
   }
 
-  traducirDocAEsp(guidelinesEn: IGuideline[]) {
+  traducirDocAEsp(guidelinesEn: IGuideline[]): ICriterio[] {
+    this.pautasDocEs = [];
     for (let elemento of guidelinesEn) {
       const idPautaEN = this.obtenerID(elemento.name);
-      if (
-        this.pautasDocEs.includes((apiDocsEspanol as any)[idPautaEN]) == false
-      ) {
-        this.pautasDocEs.push((apiDocsEspanol as any)[idPautaEN]);
-      }
+      this.pautasDocEs.push((apiDocsEspanol as any)[idPautaEN]);
     }
+
+    return this.pautasDocEs;
+  }
+
+  traducirDocAEsp3(guidelinesEn: IGuideline[]) {
+    this.pautasDocEs = guidelinesEn.map((guideline) => {
+      const idPautaEN = this.obtenerID(guideline.name);
+      return (apiDocsEspanol as any)[idPautaEN];
+    });
 
     return this.pautasDocEs;
   }
