@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,27 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  irValidador() {
-    this.router.navigateByUrl('validador');
-  }
-
-  irEstadisticas() {
-    this.router.navigateByUrl('estadisticas');
-  }
-  irAccesibilidad() {
-    this.router.navigateByUrl('accesibilidad');
-  }
-  irUsabilidad() {
-    this.router.navigateByUrl('usabilidad');
-  }
-  irUX() {
-    this.router.navigateByUrl('ux');
-  }
-  irQuienSoy() {
-    this.router.navigateByUrl('quiensoy');
-  }
 }

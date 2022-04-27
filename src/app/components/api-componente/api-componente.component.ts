@@ -26,13 +26,10 @@ export class ApiComponenteComponent implements OnInit {
   public errors!: any[];
   public analisis: ICategoria[] = [];
   public resultadosTraducidos: ICategoria[] = [];
-  public datosInicio!: string;
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
-    this.analizarWeb();
-  }
+  ngOnInit(): void {}
 
   async analizarWeb() {
     this.resultadosAnalisisWeb = await this.apiService.analizarWeb(
@@ -40,11 +37,11 @@ export class ApiComponenteComponent implements OnInit {
     );
     if (!this.resultadosAnalisisWeb?.categories) return;
 
-    //
-    //this.datosInicio = (this.resultadosAnalisisWeb.statistics as any);
+    console.log(this.resultadosAnalisisWeb);
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
     console.log({ categories });
+    console.log(categories);
 
     /*     console.log({ categories });
     categories.map((category) => {
@@ -97,12 +94,5 @@ export class ApiComponenteComponent implements OnInit {
     });
 
     console.log('===>', this.resultadosTraducidos);
-  }
-
-  async buscarID() {
-    this.result = await this.apiService.consultarDoc();
-    console.log(this.result);
-    this.titulo2 = this.result?.title || '';
-    this.guias = this.result?.guidelines || [];
   }
 }

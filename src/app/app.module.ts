@@ -19,9 +19,21 @@ import { AccesibilidadComponent } from './pages/accesibilidad/accesibilidad.comp
 import { UsabilidadComponent } from './pages/usabilidad/usabilidad.component';
 import { UxComponent } from './pages/ux/ux.component';
 import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
-  declarations: [AppComponent, ApiComponenteComponent, HomeComponent, EstadisticasComponent, AccesibilidadComponent, UsabilidadComponent, UxComponent, QuiensoyComponent],
+  declarations: [
+    AppComponent,
+    ApiComponenteComponent,
+    HomeComponent,
+    EstadisticasComponent,
+    AccesibilidadComponent,
+    UsabilidadComponent,
+    UxComponent,
+    QuiensoyComponent,
+    ToolbarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,6 +46,7 @@ import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
     MatToolbarModule,
     MatCardModule,
     MatExpansionModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

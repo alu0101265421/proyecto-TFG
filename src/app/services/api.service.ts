@@ -12,7 +12,7 @@ export interface IAnalisisResult {
   };
   statistics: {
     pagetitle: string;
-    url: string;
+    pageurl: string;
     time: number;
     creditsremaining: number;
   };
@@ -68,27 +68,14 @@ export class ApiService {
 
   analizarWeb(url: string): Promise<IAnalisisResult> | null {
     try {
-      /*        return lastValueFrom(
-         this.http
-           .get<IAnalisisResult>(
-             `${this.URL_BASE}/request?key=${this.API_KEY}&reporttype=2&url=${url}`
-           )
-           .pipe(take(1))
-       ); */
-      return Promise.resolve(result as unknown as IAnalisisResult);
-    } catch (error) {
-      console.error(error);
-      return null;
-    }
-  }
-  consultarDoc(id: string = 'alt_link_missing'): Promise<IDocResult> | null {
-    try {
-      //https://wave.webaim.org/api/docs?id=alt
-      return lastValueFrom(
+      /*       return lastValueFrom(
         this.http
-          .get<IDocResult>(`${this.URL_BASE}/docs?id=${id}`)
+          .get<IAnalisisResult>(
+            `${this.URL_BASE}/request?key=${this.API_KEY}&reporttype=2&url=${url}`
+          )
           .pipe(take(1))
-      );
+      ); */
+      return Promise.resolve(result as unknown as IAnalisisResult);
     } catch (error) {
       console.error(error);
       return null;

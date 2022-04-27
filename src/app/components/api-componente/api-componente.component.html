@@ -14,52 +14,49 @@
   <button mat-raised-button color="accent" (click)="analizarWeb()">
     Validar Accesibilidad
   </button>
-
-  <button mat-raised-button color="accent" (click)="buscarID()">
-    ID resultados
-  </button>
 </div>
 
-<!-- Poner el pagetittle con el enlace de la parte de analisisweb -->
-<!-- <div>
-  <h2>{{ datosInicio.pagetitle }}</h2>
-  <ul>
-    <li *ngFor="let guia of guias">
-      {{ guia.name }}
-    </li>
-  </ul>
+<div>
+  <h2>{{ resultadosAnalisisWeb?.statistics?.pagetitle }}</h2>
+  <p>{{ resultadosAnalisisWeb?.statistics?.pageurl }}</p>
 </div>
- -->
-<div class="Criterios">
-  <mat-card *ngFor="let object of resultadosTraducidos">
-    <mat-card-title>{{ object.tipo }}</mat-card-title>
 
-    <mat-accordion>
-      <mat-expansion-panel
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false"
-        *ngFor="let pauta of object.pautas"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title> {{ pauta.titulo }} </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-accordion>
-          <mat-expansion-panel
-            (opened)="panelOpenState = true"
-            (closed)="panelOpenState = false"
-            *ngFor="let criterio of pauta.criterios"
-          >
-            <mat-expansion-panel-header>
-              <mat-panel-title> {{ criterio.title }} </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>{{ criterio.descripcion }}</p>
-            <a mat-raised-button href="{{ criterio.link }}" target="_blank"
-              >Consultar más información</a
+<div class="criterios">
+  <ng-container *ngFor="let object of resultadosTraducidos">
+    <mat-card class="tarjeta-resultado" *ngIf="object.pautas.length > 0">
+      <mat-card-title>{{ object.tipo }}</mat-card-title>
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+          *ngFor="let pauta of object.pautas"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title class="titulo-pauta">
+              {{ pauta.titulo }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-accordion>
+            <mat-expansion-panel
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+              *ngFor="let criterio of pauta.criterios"
             >
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </mat-card>
-  <!--  </mat-card> -->
+              <mat-expansion-panel-header>
+                <mat-panel-title> {{ criterio.title }} </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>{{ criterio.descripcion }}</p>
+              <mat-card-actions align="end">
+                <a mat-raised-button href="{{ criterio.link }}" target="_blank"
+                  >Consultar más información</a
+                >
+              </mat-card-actions>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card>
+  </ng-container>
 </div>
+
+<mat-spinner></mat-spinner>
