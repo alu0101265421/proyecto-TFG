@@ -1,7 +1,16 @@
 <mat-toolbar>
-  <span>My Application</span>
+  <img
+    src="/assets/images/marca-universidad-de-la-laguna-original.png"
+    alt="Universidad de la Laguna"
+    height="80"
+  />
+
   <div>
-    <button mat-raised-button color="primary" (click)="irQuienSoy()">
+    <button mat-button color="primary" (click)="irHome()">Home</button>
+  </div>
+
+  <div>
+    <button mat-button color="primary" (click)="irQuienSoy()">
       ¿Quién soy?
     </button>
   </div>

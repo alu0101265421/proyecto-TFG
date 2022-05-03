@@ -1,0 +1,22 @@
+.footer {
+  background-color: RGB(245, 245, 245);
+  position: absolute;
+  left: 0;
+  margin-bottom: -60px;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+.copyright {
+  color: black;
+  text-align: center;
+}
+.mail {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+.icon-email {
+  margin-top: -5px;
+  margin-right: 5px;
+}

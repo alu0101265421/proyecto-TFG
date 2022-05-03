@@ -21,6 +21,8 @@ import { UxComponent } from './pages/ux/ux.component';
 import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { PiepagToolbarComponent } from './components/piepag-toolbar/piepag-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     UxComponent,
     QuiensoyComponent,
     ToolbarComponent,
+    PiepagToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatCardModule,
     MatExpansionModule,
     MatProgressSpinnerModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

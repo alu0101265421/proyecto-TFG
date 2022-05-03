@@ -1,0 +1,26 @@
+.pagina {
+  margin: 6em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(6em, auto);
+}
+.ser {
+  background-color: rgb(123, 238, 228);
+}
+.validador {
+  background-color: rgba(240, 232, 158, 0.986);
+}
+.estadistica {
+  background-color: rgb(169, 169, 243);
+}
+.accesibilidad {
+  background-color: rgb(238, 167, 134);
+}
+.usabilidad {
+  background-color: rgb(255, 192, 227);
+}
+
+.ux {
+  background-color: rgb(158, 247, 158);
+}

@@ -11,6 +11,10 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  irHome() {
+    this.router.navigateByUrl('home');
+  }
+
   irValidador() {
     this.router.navigateByUrl('validador');
   }

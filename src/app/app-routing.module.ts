@@ -11,6 +11,7 @@ import { UxComponent } from './pages/ux/ux.component';
 const routes: Routes = [
   { component: HomeComponent, path: 'home' },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'validador', component: ApiComponenteComponent },
   { path: 'estadisticas', component: EstadisticasComponent },
   { path: 'accesibilidad', component: AccesibilidadComponent },
