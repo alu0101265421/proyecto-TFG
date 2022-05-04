@@ -1,34 +1,32 @@
-<mat-grid-list class="Pagina" cols="2" rowHeight="4:1">
-  <mat-grid-tile class="ser">
+<mat-grid-list class="pagina" cols="2" rowHeight="4:1">
+  <mat-grid-tile class="ser caja" (click)="irQuienSoy()">
+    <p>¿Quién soy?</p>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="validador caja" (click)="irValidador()">
     <div>
-      <button mat-button (click)="irQuienSoy()">¿Quién soy?</button>
+      <button mat-button>Validador</button>
     </div>
   </mat-grid-tile>
 
-  <mat-grid-tile class="validador">
+  <mat-grid-tile class="estadistica caja" (click)="irEstadisticas()">
     <div>
-      <button mat-button (click)="irValidador()">Validador</button>
+      <button mat-button>Estadísticas</button>
     </div>
   </mat-grid-tile>
-
-  <mat-grid-tile class="estadistica">
+  <mat-grid-tile class="accesibilidad caja" (click)="irAccesibilidad()">
     <div>
-      <button mat-button (click)="irEstadisticas()">Estadísticas</button>
+      <button mat-button>Accesibilidad</button>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile class="accesibilidad">
+  <mat-grid-tile class="usabilidad caja" (click)="irUsabilidad()">
     <div>
-      <button mat-button (click)="irAccesibilidad()">Accesibilidad</button>
+      <button mat-button>Usabilidad</button>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile class="usabilidad">
+  <mat-grid-tile class="ux caja" (click)="irUX()">
     <div>
-      <button mat-button (click)="irUsabilidad()">Usabilidad</button>
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile class="ux">
-    <div>
-      <button mat-button (click)="irUX()">Experiencia de Usuario</button>
+      <button mat-button>Experiencia de Usuario</button>
     </div>
   </mat-grid-tile>
 </mat-grid-list>

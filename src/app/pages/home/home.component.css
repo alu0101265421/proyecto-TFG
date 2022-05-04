@@ -1,5 +1,4 @@
 .pagina {
-  margin: 6em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -23,4 +22,9 @@
 
 .ux {
   background-color: rgb(158, 247, 158);
+}
+
+.caja {
+  margin-left: 10px;
+  cursor: pointer;
 }
