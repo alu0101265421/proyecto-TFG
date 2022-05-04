@@ -1,32 +1,39 @@
-<mat-grid-list class="pagina" cols="2" rowHeight="4:1">
+<mat-card class="banner">
+  <mat-card-title class="titulo">Web Accesibilidad y Usabilidad</mat-card-title>
+  <mat-card-subtitle class="subtitulo"
+    >Bienvenido. Este es el Home del aplicativo web que trata diferentes
+    aspectos sobre la accesibilidad y usabilidad</mat-card-subtitle
+  >
+</mat-card>
+
+<mat-grid-list class="pagina" cols="2" rowHeight="150px" gutterSize="40px">
   <mat-grid-tile class="ser caja" (click)="irQuienSoy()">
+    <mat-icon class="person">person</mat-icon>
     <p>¿Quién soy?</p>
   </mat-grid-tile>
 
   <mat-grid-tile class="validador caja" (click)="irValidador()">
-    <div>
-      <button mat-button>Validador</button>
-    </div>
+    <mat-icon class="check">check_circle</mat-icon>
+    <p>Validador</p>
   </mat-grid-tile>
 
   <mat-grid-tile class="estadistica caja" (click)="irEstadisticas()">
-    <div>
-      <button mat-button>Estadísticas</button>
-    </div>
+    <mat-icon class="poll">poll</mat-icon>
+    <p>Estadísticas</p>
   </mat-grid-tile>
+
   <mat-grid-tile class="accesibilidad caja" (click)="irAccesibilidad()">
-    <div>
-      <button mat-button>Accesibilidad</button>
-    </div>
+    <mat-icon class="accesib">accessible</mat-icon>
+    <p>Accesibilidad</p>
   </mat-grid-tile>
+
   <mat-grid-tile class="usabilidad caja" (click)="irUsabilidad()">
-    <div>
-      <button mat-button>Usabilidad</button>
-    </div>
+    <mat-icon class="usability">autorenew</mat-icon>
+    <p>Usabilidad</p>
   </mat-grid-tile>
+
   <mat-grid-tile class="ux caja" (click)="irUX()">
-    <div>
-      <button mat-button>Experiencia de Usuario</button>
-    </div>
+    <mat-icon class="people">people</mat-icon>
+    <p>Experiencia de Usuario</p>
   </mat-grid-tile>
 </mat-grid-list>
