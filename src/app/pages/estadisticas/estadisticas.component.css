@@ -1,3 +1,23 @@
 section {
   height: calc(100vh - 60px - 64px);
 }
+.banner {
+  display: flex;
+  padding: 50px;
+  height: 100px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e9dd;
+  margin-bottom: 30px;
+}
+.titulo {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  color: rgb(26, 26, 26);
+}

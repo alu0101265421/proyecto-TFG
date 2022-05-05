@@ -1,5 +1,11 @@
-<h1>Validador</h1>
-<h3>Se trata de una validador de accesibilidad etc...</h3>
+<div class="banner">
+  <mat-card-title class="titulo">Validador de accesibilidad</mat-card-title>
+  <mat-card-subtitle class="subtitulo"
+    >El validador es una herramienta que nos va a permitir analizar la
+    accesibilidad de una determinada URL que introduzcamos. Se rigue por los
+    criterios WCAG 2.1.</mat-card-subtitle
+  >
+</div>
 
 <div class="link">
   <mat-form-field>
@@ -10,14 +16,17 @@
       placeholder="Ingrese url"
     />
   </mat-form-field>
-  <button mat-raised-button color="accent" (click)="analizarWeb()">
+
+  <button mat-raised-button color="primary" (click)="analizarWeb()">
     Validar Accesibilidad
   </button>
-  <mat-spinner></mat-spinner>
+  <mat-spinner style="margin: 0 auto" *ngIf="showSpinner"></mat-spinner>
 </div>
 
-<div>
-  <h2>{{ resultadosAnalisisWeb?.statistics?.pagetitle }}</h2>
+<div class="pag-select">
+  <h2 class="titulo-parlamento">
+    {{ resultadosAnalisisWeb?.statistics?.pagetitle }}
+  </h2>
   <p>{{ resultadosAnalisisWeb?.statistics?.pageurl }}</p>
 </div>
 
@@ -43,11 +52,17 @@
               *ngFor="let criterio of pauta.criterios"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> {{ criterio.title }} </mat-panel-title>
+                <mat-panel-title class="titulo-criterio">
+                  {{ criterio.title }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <p>{{ criterio.descripcion }}</p>
               <mat-card-actions align="end">
-                <a mat-raised-button href="{{ criterio.link }}" target="_blank"
+                <a
+                  mat-raised-button
+                  href="{{ criterio.link }}"
+                  target="_blank"
+                  color="primary"
                   >Consultar más información</a
                 >
               </mat-card-actions>

@@ -28,11 +28,15 @@ export class ApiComponenteComponent implements OnInit {
   public analisis: ICategoria[] = [];
   public resultadosTraducidos: ICategoria[] = [];
 
+  public showSpinner = false;
+
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {}
 
   async analizarWeb() {
+    this.showSpinner = true;
+
     this.resultadosAnalisisWeb = await this.apiService.analizarWeb(
       this.direccion
     );
@@ -43,42 +47,6 @@ export class ApiComponenteComponent implements OnInit {
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
     console.log({ categories });
     console.log(categories);
-
-    /*     console.log({ categories });
-    categories.map((category) => {
-      const items = Object.values(category.items);
-    }); */
-
-    // category.items:
-    // {
-    //   alt_noseque: {
-    //      id: 'alt_noseque',
-    //      description: 'sfgsf',
-    //      count: 3
-    //   },
-    //   alt_noseque_2: {
-    //      id: 'alt_noseque_2',
-    //      description: 'sfgsf',
-    //      count: 3
-    //   }
-    // },
-
-    /* 
-          Object.value:
-
-          [
-            {
-              id: 'alt_noseque',
-              description: 'sfgsf',
-              count: 3
-            },
-            {
-              id: 'alt_noseque_2',
-              description: 'sfgsf',
-              count: 3
-            }
-          ]
-    */
 
     this.resultadosTraducidos = categories.map((category) => {
       const tipo = category.description;
@@ -93,6 +61,10 @@ export class ApiComponenteComponent implements OnInit {
 
       return { tipo, pautas };
     });
+
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 5000);
 
     console.log('===>', this.resultadosTraducidos);
   }

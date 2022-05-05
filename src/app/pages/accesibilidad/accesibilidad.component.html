@@ -1,1 +1,105 @@
-<p>accesibilidad works!</p>
+<div class="banner">
+  <mat-card-title class="titulo">Accesibilidad</mat-card-title>
+  <mat-card-subtitle class="subtitulo"
+    >Esta página habla de los diferentes aspectos de la accesibilidad que están
+    en uso.</mat-card-subtitle
+  >
+</div>
+
+<mat-expansion-panel
+  class="legislacion"
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Legislación </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>
+    La "Directiva (UE) 2016/2102 del Parlamento Europeo y del Consejo sobre la
+    accesibilidad de los sitios web y aplicaciones para dispositivos móviles de
+    los organismos del sector público", traspuesta a la legislación española
+    mediante el "Real Decreto 1112/2018 sobre accesibilidad de los sitios web y
+    aplicaciones para dispositivos móviles del sector público", obliga a dichos
+    portales y apps del sector público a ser accesibles y a llevar un
+    seguimiento periódico del cumplimiento del mismo.
+  </p>
+  <p>
+    La "Decisión de Ejecución (UE) 2018/1524 de la Comisión Europea, de 11 de
+    octubre de 2018, por la que se establecen una metodología de seguimiento y
+    las disposiciones para la presentación de informes por parte de los Estados
+    miembros de conformidad con la Directiva (UE) 2016/2102” especifican: Cómo
+    deben los estados realizar el seguimiento de accesibilidad de los portales,
+    con qué métodos hacer el seguimiento para la verificación, cuales son los
+    métodos de seguimiento simplificado con herramientas automatizadas y cómo se
+    deben presentar los informes.
+  </p>
+</mat-expansion-panel>
+
+<mat-expansion-panel
+  class="metodologias"
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Metodologias </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>
+    El Observatorio Accesibilidad Web aprobó en noviembre de 2020 y marzo de
+    2021 dos metodologías de estudio para los sitios web. Estas son La
+    Metodología para el Seguimiento Simplificado UNE-EN 301549:2019 y La
+    Metodología en Profundidad para Sitios Web UNE-EN 301549:2019,
+    respectivamente. La unión de ambas es necesaria para poder reportar el grado
+    de cumplimiento de los sitios web del sector público español con respecto a
+    los requisitos de accesibilidad.
+  </p>
+  <p>
+    En nuestro caso, nos centramos en La Metodología para el Seguimiento
+    Simplificado UNE-EN 301549:2019 para el análisis de los casos de estudio.
+    Esta se basa en realizar unas comprobaciones automáticas con la que se
+    verifique, dependiendo del nivel de adecuación y de la muestra de páginas
+    seleccionadas, los criterios que se establecen en las WCAG 2.1.
+  </p>
+</mat-expansion-panel>
+
+<mat-expansion-panel
+  class="herramientas"
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Herramientas </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>Existen las herramientas automáticas y las manuales:</p>
+  <ul>
+    <li>
+      <p>
+        Las herramientas automáticas detectan numerosos problemas que de otra
+        manera sería muy difícil y nos costaría mucho tiempo. Pero no todas las
+        herramientas detectan los mismos problemas e incluso pueden llegar a dar
+        falsos positivos. Cabe destacar que la mayoría de estas herramientas
+        tiene versión online y gratuitas, pero validan según las WCAG 2.0, y
+        algunas en proceso de adaptación para las WCAG 2.1.
+      </p>
+    </li>
+    <li>
+      <p>
+        La mayoría de las herramientas manuales son plugins o extensiones para
+        el navegador. Muchas de estas se emplean a lo largo del desarrollo del
+        sitio web o se necesita el código fuente para poder analizarlo.
+      </p>
+    </li>
+  </ul>
+  <p>
+    En general, las herramientas automáticas nos son de gran utilidad en un
+    periodo de tiempo para identificar/analizar los problemas de accesibilidad
+    que se presentan en una web, pero estas no son 100% y no detectan todos los
+    problemas. Por eso, se recomienda que para completar el proceso de
+    validación se utilicen, aparte de las automáticas, otras herramientas
+    manuales o semiautomáticas.
+  </p>
+  <p>
+    Además, se debe llevar una revisión periódica que garantice el mantenimiento
+    del sitio web, independientemente de si se añade o modifica contenido. El
+    periodo de estas no pueden superar los 3 años.
+  </p>
+</mat-expansion-panel>

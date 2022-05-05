@@ -1,11 +1,62 @@
+.banner {
+  display: flex;
+  padding: 50px;
+  height: 100px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e9dd;
+  margin-bottom: 30px;
+}
+.titulo {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  color: rgb(26, 26, 26);
+}
+
+.link {
+  text-align: center;
+  font-size: large;
+}
+.link mat-form-field {
+  margin: 20px;
+  width: 500px;
+}
+
+.pag-select {
+  display: flex;
+  padding: 50px;
+  height: 100px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.titulo-parlamento {
+  font-weight: bold;
+  border-top: 2px solid #f3e9dd;
+}
+
 .mat-form-field + .mat-form-field {
   margin-left: 8px;
 }
 
 .titulo-pauta {
-  color: palevioletred;
+  color: black;
+  font-style: oblique;
 }
 
 .tarjeta-resultado {
   margin: 30px;
+  background-color: #b7cadb;
+}
+
+.titulo-criterio {
+  font-weight: bold;
 }
