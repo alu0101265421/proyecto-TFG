@@ -10,7 +10,6 @@ section {
   align-items: center;
   justify-content: center;
   background-color: #f3e9dd;
-  margin-bottom: 30px;
 }
 .titulo {
   color: black;
@@ -21,3 +20,44 @@ section {
 .subtitulo {
   color: rgb(26, 26, 26);
 }
+
+.example-container {
+  position: absolute;
+  height: 100%;
+  /*   top: 264px;
+  bottom: 60px; */
+  left: 0;
+  right: 0;
+  background: #fdf6ec;
+}
+
+mat-sidenav {
+  background: #b7cadb;
+  width: 200px;
+  padding-top: 1%;
+}
+mat-sidenav-content {
+  padding: 5%;
+}
+.boton-sidenav {
+  border-bottom: 1px solid #88abc9;
+}
+iframe {
+  background-color: #fdf6ec;
+}
+.titulo {
+  margin-bottom: 40px;
+}
+.titulo-info {
+  font-weight: bold;
+  font-style: oblique;
+}
+.contenido-canarias {
+  text-align: center;
+}
+/* .example-container {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
+} */

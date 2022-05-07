@@ -6,4 +6,89 @@
       Senado estudiados.</mat-card-subtitle
     >
   </div>
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <div class="boton-sidenav">
+        <button mat-button (click)="menu(1)">Andalucía</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button (click)="menu(2)">Canarias</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button>Cataluña</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button>Comunidad de Madrid</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button>Comunidad Valenciana</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button>Extremadura</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button>Galicia</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button>Principado de Asturias</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button>Congreso de Diputados</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button>Senado de España</button>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="contenido-canarias" *ngIf="!seleccionado">
+        <h2 class="titulo">Parlamento de Canarias</h2>
+        <!--         <img
+          src="/assets/images/Canarias.png"
+          alt="Gráfica de barras del cumplimiento de los criterios por niveles"
+          height="auto"
+        /> -->
+        <div class="evaluacion-total">
+          <h3 class="titulo-info">Evaluación de los criterios</h3>
+          <p>
+            Esta gráfica representa una comparativa de los criterios evaluados
+            para los dos niveles de estudio.
+          </p>
+
+          <p align="center">
+            <iframe
+              width="600"
+              height="371"
+              seamless
+              frameborder="0"
+              scrolling="no"
+              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizEZG33t24Bwfeu0WX7n1G_9IwaHHUjV1bAw1bgqTJWSKCOzA7C4hvoNrWSrmNw3BbPI3YhOJTF-w/pubchart?oid=833288312&amp;format=interactive"
+            ></iframe>
+          </p>
+        </div>
+        <div>
+          <iframe
+            width="628"
+            height="250"
+            seamless
+            frameborder="0"
+            scrolling="no"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizEZG33t24Bwfeu0WX7n1G_9IwaHHUjV1bAw1bgqTJWSKCOzA7C4hvoNrWSrmNw3BbPI3YhOJTF-w/pubchart?oid=1276371627&amp;format=interactive"
+          ></iframe>
+        </div>
+        <div></div>
+      </div>
+    </mat-sidenav-content>
+    <mat-sidenav-content>
+      <div class="contenido-andalucia" *ngIf="!seleccionado">
+        <h2 class="titulo2">Parlamento de Andalucia</h2>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </section>

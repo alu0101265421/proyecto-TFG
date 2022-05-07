@@ -23,6 +23,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { PiepagToolbarComponent } from './components/piepag-toolbar/piepag-toolbar.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { PiepagToolbarComponent } from './components/piepag-toolbar/piepag-toolb
     MatExpansionModule,
     MatProgressSpinnerModule,
     MatGridListModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
