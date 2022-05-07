@@ -28,6 +28,10 @@
   width: 500px;
 }
 
+.criterios {
+  margin-left: 70px;
+  margin-right: 70px;
+}
 .pag-select {
   display: flex;
   padding: 50px;
