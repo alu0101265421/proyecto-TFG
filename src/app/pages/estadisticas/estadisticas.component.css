@@ -36,25 +36,31 @@ mat-sidenav {
   width: 200px;
   padding-top: 1%;
 }
+
 mat-sidenav-content {
   padding: 5%;
 }
+
 .boton-sidenav {
   border-bottom: 1px solid #88abc9;
 }
+
 iframe {
   background-color: #fdf6ec;
+  margin-bottom: 60px;
 }
 .titulo {
   margin-bottom: 40px;
 }
-.titulo-info {
+h3 {
   font-weight: bold;
   font-style: oblique;
 }
 .contenido-canarias {
   text-align: center;
+  margin-bottom: 50px;
 }
+
 /* .example-container {
   width: 400px;
   height: 200px;
