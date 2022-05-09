@@ -95,22 +95,12 @@ export class ApiService {
     return pautasES;
   }
 
-  //elegir entre una opcion
   traducirDocAEsp(guidelinesEn: IGuideline[]): ICriterio[] {
     this.pautasDocEs = [];
     for (let elemento of guidelinesEn) {
       const idPautaEN = this.obtenerID(elemento.name);
       this.pautasDocEs.push((apiDocsEspanol as any)[idPautaEN]);
     }
-
-    return this.pautasDocEs;
-  }
-
-  traducirDocAEsp3(guidelinesEn: IGuideline[]) {
-    this.pautasDocEs = guidelinesEn.map((guideline) => {
-      const idPautaEN = this.obtenerID(guideline.name);
-      return (apiDocsEspanol as any)[idPautaEN];
-    });
 
     return this.pautasDocEs;
   }

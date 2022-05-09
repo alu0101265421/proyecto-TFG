@@ -45,11 +45,12 @@ export class ApiComponenteComponent implements OnInit {
 
     if (!this.resultadosAnalisisWeb?.categories) return;
 
-    console.log(this.resultadosAnalisisWeb);
+    //console.log(this.resultadosAnalisisWeb);
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
-    /*     console.log({ categories });
-    console.log(categories); */
+
+    /* console.log({ categories });
+       console.log(categories); */
 
     this.resultadosTraducidos = categories.map((category) => {
       const tipo = category.description;
