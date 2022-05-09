@@ -40,13 +40,16 @@ export class ApiComponenteComponent implements OnInit {
     this.resultadosAnalisisWeb = await this.apiService.analizarWeb(
       this.direccion
     );
+
+    this.showSpinner = false;
+
     if (!this.resultadosAnalisisWeb?.categories) return;
 
     console.log(this.resultadosAnalisisWeb);
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
-    console.log({ categories });
-    console.log(categories);
+    /*     console.log({ categories });
+    console.log(categories); */
 
     this.resultadosTraducidos = categories.map((category) => {
       const tipo = category.description;
@@ -56,16 +59,12 @@ export class ApiComponenteComponent implements OnInit {
       const pautas = items.map((item) => {
         const id = item.id;
         const criterios = this.apiService.obtenerPautasDeID(id);
-        return { id, criterios, titulo: item.description };
+        return { id: id, criterios: criterios, titulo: item.description };
       });
 
       return { tipo, pautas };
     });
 
-    setTimeout(() => {
-      this.showSpinner = false;
-    }, 5000);
-
-    console.log('===>', this.resultadosTraducidos);
+    /*     console.log('===>', this.resultadosTraducidos); */
   }
 }
