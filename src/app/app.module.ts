@@ -24,6 +24,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { PiepagToolbarComponent } from './components/piepag-toolbar/piepag-toolbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { EstCanariasComponent } from './pages/estadisticas/canarias/est-canarias/est-canarias.component';
+import { EstAndaluciaComponent } from './pages/estadisticas/andalucia/est-andalucia/est-andalucia.component';
+import { EstValenciaComponent } from './pages/estadisticas/valencia/est-valencia/est-valencia.component';
+import { EstMadridComponent } from './pages/estadisticas/madrid/est-madrid/est-madrid.component';
+import { EstCatalunaComponent } from './pages/estadisticas/cataluna/est-cataluna/est-cataluna.component';
+import { EstExtremaduraComponent } from './pages/estadisticas/extremadura/est-extremadura/est-extremadura.component';
+import { EstGaliciaComponent } from './pages/estadisticas/galicia/est-galicia/est-galicia.component';
+import { EstAsturiasComponent } from './pages/estadisticas/asturias/est-asturias/est-asturias.component';
+import { EstCongresoComponent } from './pages/estadisticas/congreso/est-congreso/est-congreso.component';
+import { EstSenadoComponent } from './pages/estadisticas/senado/est-senado/est-senado.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -37,6 +48,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     QuiensoyComponent,
     ToolbarComponent,
     PiepagToolbarComponent,
+    EstCanariasComponent,
+    EstAndaluciaComponent,
+    EstValenciaComponent,
+    EstMadridComponent,
+    EstCatalunaComponent,
+    EstExtremaduraComponent,
+    EstGaliciaComponent,
+    EstAsturiasComponent,
+    EstCongresoComponent,
+    EstSenadoComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +74,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatProgressSpinnerModule,
     MatGridListModule,
     MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

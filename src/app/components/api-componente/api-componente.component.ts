@@ -45,7 +45,7 @@ export class ApiComponenteComponent implements OnInit {
 
     if (!this.resultadosAnalisisWeb?.categories) return;
 
-    //console.log(this.resultadosAnalisisWeb);
+    console.log(this.resultadosAnalisisWeb);
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
 

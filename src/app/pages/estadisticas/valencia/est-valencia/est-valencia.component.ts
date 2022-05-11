@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-estadisticas',
-  templateUrl: './estadisticas.component.html',
-  styleUrls: ['./estadisticas.component.css'],
+  selector: 'app-est-valencia',
+  templateUrl: './est-valencia.component.html',
+  styleUrls: ['./est-valencia.component.css'],
 })
-export class EstadisticasComponent implements OnInit {
+export class EstValenciaComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
@@ -52,7 +52,7 @@ export class EstadisticasComponent implements OnInit {
     console.log('Muestro las graficas de madrid');
   }
   senado() {
-    this.router.navigateByUrl('sendado');
+    this.router.navigateByUrl('senado');
 
     console.log('Muestro las graficas de sendado');
   }

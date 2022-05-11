@@ -1,0 +1,112 @@
+<section>
+  <div class="banner">
+    <mat-card-title class="titulo">Estadísticas</mat-card-title>
+    <mat-card-subtitle class="subtitulo">
+      Se presentan las estadísticas de cada uno de los Parlamentos, Congreso y
+      Senado estudiados.
+    </mat-card-subtitle>
+    <mat-card-subtitle class="subtitulo">
+      Las herramientas con las que se hace este estudio han sido Taw y Achecker,
+      por lo que los datos que se presentan a continuación no son concluyentes.
+    </mat-card-subtitle>
+  </div>
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <div class="boton-sidenav">
+        <button mat-button (click)="andalucia()">Andalucía</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button (click)="canarias()">Canarias</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button (click)="cataluna()">Cataluña</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button (click)="madrid()">Comunidad de Madrid</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button (click)="valencia()">Comunidad Valenciana</button>
+      </div>
+
+      <div class="boton-sidenav">
+        <button mat-button (click)="extremadura()">Extremadura</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button (click)="galicia()">Galicia</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button (click)="asturias()">Principado de Asturias</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button (click)="congreso()">Congreso de Diputados</button>
+      </div>
+      <div class="boton-sidenav">
+        <button mat-button (click)="senado()">Senado de España</button>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="contenido-canarias">
+        <h2 class="titulo">Parlamento de Galicia</h2>
+
+        <div class="evaluacion-total">
+          <h3 class="titulo-info">Evaluación de los criterios</h3>
+          <p>
+            Esta gráfica representa una comparativa de los criterios evaluados
+            para los dos niveles de estudio.
+          </p>
+
+          <p align="center">
+            <iframe
+              width="600"
+              height="371"
+              seamless
+              frameborder="0"
+              scrolling="no"
+              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizEZG33t24Bwfeu0WX7n1G_9IwaHHUjV1bAw1bgqTJWSKCOzA7C4hvoNrWSrmNw3BbPI3YhOJTF-w/pubchart?oid=958139602&amp;format=interactive"
+            ></iframe>
+          </p>
+        </div>
+        <div class="evaluacion-A">
+          <h3 class="titulo-A">Evaluación nivel A</h3>
+          <p>
+            Esta gráfica representa el porcentaje de cumplimiento de todos los
+            criterios WCAG 2.1 que se han evaluado del nivel de conformidad A.
+          </p>
+          <p align="center">
+            <iframe
+              width="665"
+              height="290"
+              seamless
+              frameborder="0"
+              scrolling="no"
+              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizEZG33t24Bwfeu0WX7n1G_9IwaHHUjV1bAw1bgqTJWSKCOzA7C4hvoNrWSrmNw3BbPI3YhOJTF-w/pubchart?oid=1916821260&amp;format=interactive"
+            ></iframe>
+          </p>
+        </div>
+        <div class="evaluacion-AA">
+          <h3 class="titulo-AA">Evaluación nivel AA</h3>
+          <p>
+            Esta gráfica representa el porcentaje de cumplimiento de todos los
+            criterios WCAG 2.1 que se han evaluado del nivel de conformidad AA.
+          </p>
+          <p align="center">
+            <iframe
+              width="665"
+              height="290"
+              seamless
+              frameborder="0"
+              scrolling="no"
+              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRizEZG33t24Bwfeu0WX7n1G_9IwaHHUjV1bAw1bgqTJWSKCOzA7C4hvoNrWSrmNw3BbPI3YhOJTF-w/pubchart?oid=1616792919&amp;format=interactive"
+            ></iframe>
+          </p>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

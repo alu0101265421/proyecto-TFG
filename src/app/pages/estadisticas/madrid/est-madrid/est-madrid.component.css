@@ -25,7 +25,7 @@ section {
   position: absolute;
   height: 100%;
   /*   top: 264px;
-  bottom: 60px; */
+      bottom: 60px; */
   left: 0;
   right: 0;
   background: #fdf6ec;
@@ -53,17 +53,10 @@ iframe {
   margin-bottom: 40px;
 }
 h3 {
-  text-align: center;
+  font-weight: bold;
   font-style: oblique;
 }
 .contenido-canarias {
   text-align: center;
   margin-bottom: 50px;
 }
-
-/* .example-container {
-  width: 400px;
-  height: 200px;
-  margin: 10px;
-  border: 1px solid #555;
-} */
