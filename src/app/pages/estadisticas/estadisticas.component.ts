@@ -6,10 +6,8 @@ import { Router } from '@angular/router';
   templateUrl: './estadisticas.component.html',
   styleUrls: ['./estadisticas.component.css'],
 })
-export class EstadisticasComponent implements OnInit {
+export class EstadisticasComponent {
   constructor(private router: Router) {}
-
-  ngOnInit(): void {}
 
   andalucia() {
     this.router.navigateByUrl('andalucia');

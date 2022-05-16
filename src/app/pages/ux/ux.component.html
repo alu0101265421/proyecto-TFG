@@ -1,9 +1,28 @@
-<section>
-  <div class="banner">
-    <mat-card-title class="titulo">Experiencia de Usuario</mat-card-title>
-    <mat-card-subtitle class="subtitulo"
-      >Esta página habla de los diferentes aspectos de la experiencia de
-      usuario.</mat-card-subtitle
-    >
-  </div>
-</section>
+<!-- <section> -->
+<div class="banner">
+  <mat-card-title class="titulo">Experiencia de Usuario</mat-card-title>
+  <mat-card-subtitle class="subtitulo"
+    >Esta página habla de los diferentes aspectos de la experiencia de
+    usuario.</mat-card-subtitle
+  >
+</div>
+
+<div class="datos">
+  <h2>LCP</h2>
+  <p>Rango: {{ LCP?.percentile }} milisegundos</p>
+  <p>Categorizacion: {{ LCP?.category }}</p>
+
+  <h2>FID</h2>
+  <p>Rango: {{ FID?.percentile }} milisegundos</p>
+  <p>Categorizacion: {{ FID?.category }}</p>
+
+  <h2>CLS</h2>
+  <p>Rango: {{ CLS?.percentile }} milisegundos</p>
+  <p>Categorizacion: {{ CLS?.category }}</p>
+
+  <h3>
+    Valor total de la página:
+    {{ resultadosUX?.originLoadingExperience?.overall_category }}
+  </h3>
+</div>
+<!-- </section> -->

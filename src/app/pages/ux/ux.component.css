@@ -21,3 +21,7 @@ section {
 .subtitulo {
   color: rgb(26, 26, 26);
 }
+
+.datos {
+  text-align: center;
+}
