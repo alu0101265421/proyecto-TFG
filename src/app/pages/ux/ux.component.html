@@ -10,19 +10,23 @@
 <div class="datos">
   <h2>LCP</h2>
   <p>Rango: {{ LCP?.percentile }} milisegundos</p>
-  <p>Categorizacion: {{ LCP?.category }}</p>
+  <p>
+    Categorizacion:
+    <span [style]="'color:' + LCPColor">{{ LCP?.category }}</span>
+  </p>
 
   <h2>FID</h2>
   <p>Rango: {{ FID?.percentile }} milisegundos</p>
-  <p>Categorizacion: {{ FID?.category }}</p>
+  <p>
+    Categorizacion:
+    <span [style]="'color:' + FIDColor">{{ FID?.category }}</span>
+  </p>
 
   <h2>CLS</h2>
   <p>Rango: {{ CLS?.percentile }} milisegundos</p>
-  <p>Categorizacion: {{ CLS?.category }}</p>
-
-  <h3>
-    Valor total de la página:
-    {{ resultadosUX?.originLoadingExperience?.overall_category }}
-  </h3>
+  <p>
+    Categorizacion:
+    <span [style]="'color:' + CLSColor">{{ CLS?.category }}</span>
+  </p>
 </div>
 <!-- </section> -->

@@ -29,7 +29,23 @@
   </h2>
   <p>{{ resultadosAnalisisWeb?.statistics?.pageurl }}</p>
 </div>
-
+<div class="grafica">
+  <ngx-charts-bar-vertical
+    *ngIf="resultadosAnalisisWeb"
+    [view]="[700, 400]"
+    legendTitle="Leyenda"
+    [results]="grafica"
+    [gradient]="false"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    xAxisLabel="Criterios"
+    yAxisLabel="Valores"
+  >
+  </ngx-charts-bar-vertical>
+</div>
 <div class="criterios">
   <ng-container *ngFor="let object of resultadosTraducidos">
     <mat-card class="tarjeta-resultado" *ngIf="object.pautas.length > 0">

@@ -39,8 +39,6 @@ export class UxApiService {
   URL_BASE: string =
     'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?';
 
-  /**https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=https://developers.google.com/speed/pagespeed/insights/&strategy=mobile&key=yourAPIKey */
-
   private elemento: string = '';
 
   constructor(private http: HttpClient) {}
@@ -49,7 +47,7 @@ export class UxApiService {
     try {
       return lastValueFrom(
         this.http
-          .get<any>(
+          .get<IUxResult>(
             `${this.URL_BASE}url=${url}&key=AIzaSyAVyAt1dQvCvHFl_T1AB1o9tS-297m4vec`
           )
           .pipe(take(1))

@@ -35,6 +35,7 @@ import { EstAsturiasComponent } from './pages/estadisticas/asturias/est-asturias
 import { EstCongresoComponent } from './pages/estadisticas/congreso/est-congreso/est-congreso.component';
 import { EstSenadoComponent } from './pages/estadisticas/senado/est-senado/est-senado.component';
 import { MatListModule } from '@angular/material/list';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { MatListModule } from '@angular/material/list';
     MatGridListModule,
     MatSidenavModule,
     MatListModule,
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

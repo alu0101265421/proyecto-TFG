@@ -10,6 +10,11 @@ import {
 import result from '../../services/result.json';
 import { from } from 'rxjs';
 
+export interface IGrafica {
+  name: string;
+  value: number;
+}
+
 @Component({
   selector: 'app-api-componente',
   templateUrl: './api-componente.component.html',
@@ -29,6 +34,8 @@ export class ApiComponenteComponent implements OnInit {
   public resultadosTraducidos: ICategoria[] = [];
 
   public showSpinner = false;
+
+  grafica!: IGrafica[];
 
   constructor(private apiService: ApiService) {}
 
@@ -64,6 +71,14 @@ export class ApiComponenteComponent implements OnInit {
       });
 
       return { tipo, pautas };
+    });
+
+    this.grafica = this.resultadosTraducidos.map((rt) => {
+      const valorGrafica: IGrafica = {
+        name: rt.tipo,
+        value: rt.pautas.length,
+      };
+      return valorGrafica;
     });
 
     /*     console.log('===>', this.resultadosTraducidos); */
