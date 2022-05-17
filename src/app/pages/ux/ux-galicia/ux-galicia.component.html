@@ -1,5 +1,3 @@
-<!-- <section> -->
-
 <div class="banner">
   <mat-card-title class="titulo">Experiencia de Usuario</mat-card-title>
   <mat-card-subtitle class="subtitulo"
@@ -49,10 +47,38 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <h3>
-      Para analizar la experiencia de usuario de los diferentes casos de uso
-      seleccione el deseado del menú a su derecha.
-    </h3>
+    <mat-progress-bar mode="query" *ngIf="progressBar"></mat-progress-bar>
+
+    <div class="pag-select">
+      <h2 class="titulo-parlamento">Parlamento de Galicia</h2>
+      <p>{{ inicial_url }}</p>
+    </div>
+
+    <div class="datos">
+      <div class="metrica-estilo">
+        <h2 class="metrica-titulo">Largest Contentful Paint (LCP)</h2>
+        <p class="metrica-rango">{{ LCP?.percentile }} milisegundos</p>
+        <p>
+          Categorización:
+          <span [style]="'color:' + LCPColor">{{ LCP?.category }}</span>
+        </p>
+      </div>
+      <div class="metrica-estilo">
+        <h2 class="metrica-titulo">First Input Delay (FID)</h2>
+        <p class="metrica-rango">{{ FID?.percentile }} milisegundos</p>
+        <p>
+          Categorización:
+          <span [style]="'color:' + FIDColor">{{ FID?.category }}</span>
+        </p>
+      </div>
+      <div class="metrica-estilo">
+        <h2 class="metrica-titulo">Cumulative Layout Shift (CLS)</h2>
+        <p class="metrica-rango">{{ CLS?.percentile }} centisegundos</p>
+        <p>
+          Categorización:
+          <span [style]="'color:' + CLSColor">{{ CLS?.category }}</span>
+        </p>
+      </div>
+    </div>
   </mat-sidenav-content>
-  <!-- </section> -->
 </mat-sidenav-container>

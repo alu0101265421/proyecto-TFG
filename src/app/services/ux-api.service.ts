@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom, take } from 'rxjs';
-import apiUxEspanol from '../../assets/apiUXEspanol.json';
 
 export interface IUxResult {
   analysisUTCTimestamp: string;
@@ -56,14 +55,5 @@ export class UxApiService {
       console.error(error);
       return null;
     }
-  }
-
-  traducirCategoriaEsp(metricasEN: string): string {
-    const valores = Object.values(apiUxEspanol);
-
-    for (let elemento of valores) {
-      if (elemento === metricasEN) this.elemento = elemento;
-    }
-    return this.elemento;
   }
 }

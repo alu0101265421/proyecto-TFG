@@ -49,7 +49,6 @@
 <div class="criterios">
   <ng-container *ngFor="let object of resultadosTraducidos">
     <mat-card class="tarjeta-resultado" *ngIf="object.pautas.length > 0">
-      <mat-card-title>{{ object.pautas.length }}</mat-card-title>
       <mat-card-title>{{ object.tipo }}</mat-card-title>
       <mat-accordion>
         <mat-expansion-panel

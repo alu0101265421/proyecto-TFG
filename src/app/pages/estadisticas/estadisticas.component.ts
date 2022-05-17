@@ -50,7 +50,7 @@ export class EstadisticasComponent {
     console.log('Muestro las graficas de madrid');
   }
   senado() {
-    this.router.navigateByUrl('sendado');
+    this.router.navigateByUrl('senado');
 
     console.log('Muestro las graficas de sendado');
   }

@@ -16,6 +16,16 @@ import { EstValenciaComponent } from './pages/estadisticas/valencia/est-valencia
 import { HomeComponent } from './pages/home/home.component';
 import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
 import { UsabilidadComponent } from './pages/usabilidad/usabilidad.component';
+import { UxAndaluciaComponent } from './pages/ux/ux-andalucia/ux-andalucia.component';
+import { UxAsturiasComponent } from './pages/ux/ux-asturias/ux-asturias.component';
+import { UxCanariasComponent } from './pages/ux/ux-canarias/ux-canarias.component';
+import { UxCatalunaComponent } from './pages/ux/ux-cataluna/ux-cataluna.component';
+import { UxCongresoComponent } from './pages/ux/ux-congreso/ux-congreso.component';
+import { UxExtremaduraComponent } from './pages/ux/ux-extremadura/ux-extremadura.component';
+import { UxGaliciaComponent } from './pages/ux/ux-galicia/ux-galicia.component';
+import { UxMadridComponent } from './pages/ux/ux-madrid/ux-madrid.component';
+import { UxSenadoComponent } from './pages/ux/ux-senado/ux-senado.component';
+import { UxValenciaComponent } from './pages/ux/ux-valencia/ux-valencia.component';
 import { UxComponent } from './pages/ux/ux.component';
 
 const routes: Routes = [
@@ -38,6 +48,16 @@ const routes: Routes = [
   { path: 'madrid', component: EstMadridComponent },
   { path: 'senado', component: EstSenadoComponent },
   { path: 'valencia', component: EstValenciaComponent },
+  { path: 'uxcanarias', component: UxCanariasComponent },
+  { path: 'uxandalucia', component: UxAndaluciaComponent },
+  { path: 'uxasturias', component: UxAsturiasComponent },
+  { path: 'uxcataluna', component: UxCatalunaComponent },
+  { path: 'uxcongreso', component: UxCongresoComponent },
+  { path: 'uxextremadura', component: UxExtremaduraComponent },
+  { path: 'uxgalicia', component: UxGaliciaComponent },
+  { path: 'uxmadrid', component: UxMadridComponent },
+  { path: 'uxsenado', component: UxSenadoComponent },
+  { path: 'uxvalencia', component: UxValenciaComponent },
   /*   {
     path: 'sidenav',
     children: [

@@ -36,6 +36,17 @@ import { EstCongresoComponent } from './pages/estadisticas/congreso/est-congreso
 import { EstSenadoComponent } from './pages/estadisticas/senado/est-senado/est-senado.component';
 import { MatListModule } from '@angular/material/list';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { UxCanariasComponent } from './pages/ux/ux-canarias/ux-canarias.component';
+import { UxAndaluciaComponent } from './pages/ux/ux-andalucia/ux-andalucia.component';
+import { UxAsturiasComponent } from './pages/ux/ux-asturias/ux-asturias.component';
+import { UxCatalunaComponent } from './pages/ux/ux-cataluna/ux-cataluna.component';
+import { UxCongresoComponent } from './pages/ux/ux-congreso/ux-congreso.component';
+import { UxExtremaduraComponent } from './pages/ux/ux-extremadura/ux-extremadura.component';
+import { UxGaliciaComponent } from './pages/ux/ux-galicia/ux-galicia.component';
+import { UxMadridComponent } from './pages/ux/ux-madrid/ux-madrid.component';
+import { UxSenadoComponent } from './pages/ux/ux-senado/ux-senado.component';
+import { UxValenciaComponent } from './pages/ux/ux-valencia/ux-valencia.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +70,16 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     EstAsturiasComponent,
     EstCongresoComponent,
     EstSenadoComponent,
+    UxCanariasComponent,
+    UxAndaluciaComponent,
+    UxAsturiasComponent,
+    UxCatalunaComponent,
+    UxCongresoComponent,
+    UxExtremaduraComponent,
+    UxGaliciaComponent,
+    UxMadridComponent,
+    UxSenadoComponent,
+    UxValenciaComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +98,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatSidenavModule,
     MatListModule,
     NgxChartsModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

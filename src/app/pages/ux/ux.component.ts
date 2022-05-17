@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   IEstructuraUX,
   IOrigenResult,
@@ -12,101 +13,58 @@ import {
   styleUrls: ['./ux.component.css'],
 })
 export class UxComponent implements OnInit {
-  public resultadosUX!: IUxResult | null;
-  public LCP!: IEstructuraUX;
-  public FID!: IEstructuraUX;
-  public CLS!: IEstructuraUX;
+  constructor(private router: Router) {}
 
-  LCPColor!: string;
-  FIDColor!: string;
-  CLSColor!: string;
+  async ngOnInit(): Promise<void> {}
 
-  origenResult!: IOrigenResult;
-  constructor(private uxService: UxApiService) {}
+  andalucia() {
+    this.router.navigateByUrl('uxandalucia');
 
-  async ngOnInit(): Promise<void> {
-    this.resultadosUX = await this.uxService.analizarUX(
-      'https://www.parcan.es/'
-    );
-
-    if (!this.resultadosUX?.originLoadingExperience) return;
-
-    console.log(this.resultadosUX);
-
-    this.origenResult = this.resultadosUX.originLoadingExperience;
-
-    console.log(this.origenResult);
-
-    this.LCP = this.origenResult.metrics.LARGEST_CONTENTFUL_PAINT_MS;
-    this.FID = this.origenResult.metrics.FIRST_INPUT_DELAY_MS;
-    this.CLS = this.origenResult.metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE;
-
-    this.FID.category;
-    const aux = this.uxService.traducirCategoriaEsp(this.LCP.category);
-
-    this.asignarColores();
-    console.log('traducion', aux);
-
-    console.log(this.LCP);
-    console.log(this.FID);
-    console.log(this.CLS);
+    console.log('Muestro las graficas de Andalucia');
   }
+  canarias() {
+    this.router.navigateByUrl('uxcanarias');
 
-  asignarColores() {
-    const metrics = this.origenResult.metrics;
-    const LCPCategory = metrics.LARGEST_CONTENTFUL_PAINT_MS.category;
-    const FIDCategory = metrics.FIRST_INPUT_DELAY_MS.category;
-    const CLSCategory = metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.category;
+    console.log('Muestro las graficas de Canarias');
+  }
+  cataluna() {
+    this.router.navigateByUrl('uxcataluna');
 
-    switch (LCPCategory) {
-      case 'FAST':
-        this.LCPColor = 'green';
-        metrics.LARGEST_CONTENTFUL_PAINT_MS.category = 'RAPIDO';
-        break;
+    console.log('Muestro las graficas de Cataluña');
+  }
+  asturias() {
+    this.router.navigateByUrl('uxasturias');
 
-      case 'AVERAGE':
-        this.LCPColor = 'orange';
-        metrics.LARGEST_CONTENTFUL_PAINT_MS.category = 'MEDIO';
-        break;
+    console.log('Muestro las graficas de asturias');
+  }
+  congreso() {
+    this.router.navigateByUrl('uxcongreso');
 
-      case 'SLOW':
-        this.LCPColor = 'red';
-        metrics.LARGEST_CONTENTFUL_PAINT_MS.category = 'LENTO';
-        break;
-    }
+    console.log('Muestro las graficas de congreso');
+  }
+  extremadura() {
+    this.router.navigateByUrl('uxextremadura');
 
-    switch (FIDCategory) {
-      case 'FAST':
-        this.FIDColor = 'green';
-        metrics.FIRST_INPUT_DELAY_MS.category = 'RAPIDO';
-        break;
+    console.log('Muestro las graficas de extremadura');
+  }
+  galicia() {
+    this.router.navigateByUrl('uxgalicia');
 
-      case 'AVERAGE':
-        this.FIDColor = 'orange';
-        metrics.FIRST_INPUT_DELAY_MS.category = 'MEDIO';
-        break;
+    console.log('Muestro las graficas de galicia');
+  }
+  madrid() {
+    this.router.navigateByUrl('uxmadrid');
 
-      case 'SLOW':
-        this.FIDColor = 'red';
-        metrics.FIRST_INPUT_DELAY_MS.category = 'LENTO';
-        break;
-    }
+    console.log('Muestro las graficas de madrid');
+  }
+  senado() {
+    this.router.navigateByUrl('uxsenado');
 
-    switch (CLSCategory) {
-      case 'FAST':
-        this.CLSColor = 'green';
-        metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.category = 'RAPIDO';
-        break;
+    console.log('Muestro las graficas de sendado');
+  }
+  valencia() {
+    this.router.navigateByUrl('uxvalencia');
 
-      case 'AVERAGE':
-        this.CLSColor = 'orange';
-        metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.category = 'MEDIO';
-        break;
-
-      case 'SLOW':
-        this.CLSColor = 'red';
-        metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.category = 'LENTO';
-        break;
-    }
+    console.log('Muestro las graficas de valencia');
   }
 }
