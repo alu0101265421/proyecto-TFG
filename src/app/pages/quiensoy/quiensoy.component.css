@@ -19,19 +19,33 @@ section {
 }
 
 img {
-  margin-left: 200px;
-  margin-bottom: 20px;
+  padding-right: 2em;
 }
 
 .yo {
   position: relative;
   margin-top: 80px;
-  margin-right: 500px;
   float: right;
   width: 400px;
   height: 200px;
 }
 
 .ajuste {
+  padding-bottom: 2em;
   align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (max-width: 640px) {
+  .ajuste {
+    flex-flow: column wrap;
+  }
+  .yo {
+    flex-grow: 0;
+    flex-basis: 50%;
+  }
+  .img {
+    padding-right: 0;
+  }
 }
