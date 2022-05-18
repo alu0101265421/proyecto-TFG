@@ -1,9 +1,90 @@
-<section>
-  <div class="banner">
-    <mat-card-title class="titulo">Usabilidad</mat-card-title>
-    <mat-card-subtitle class="subtitulo"
-      >Esta página habla de los diferentes aspectos de la usabilidad que están
-      en uso.</mat-card-subtitle
-    >
-  </div>
-</section>
+<div class="banner">
+  <mat-card-title class="titulo">Usabilidad</mat-card-title>
+  <mat-card-subtitle class="subtitulo"
+    >Esta página habla de los diferentes aspectos de la usabilidad que están en
+    uso.</mat-card-subtitle
+  >
+</div>
+
+<mat-expansion-panel
+  class="legislacion"
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title> ¿Qué es la usabilidad? </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>
+    El término usabilidad hace referencia a la capacidad de uso de un software
+    por determinados usuarios de manera sencilla y funcional, es decir, de
+    manera intuitiva, rápida y segura el usuario puede interactuar con el
+    software. Incluimos a esta terminología en la categoría de requerimiento no
+    funcional, ya que debe ser cuantificada mediante medidas indirectas o
+    atributos.
+  </p>
+  <p>
+    Mide tres factores principales: la eficiencia, que trata de cubrir las
+    necesidades del fin del usuario, la eficacia que procura cubrir en tiempo
+    breve el objetivo del usuario, y la satisfacción que pretende que la
+    navegación por el sitio web del usuario sea sencilla, rápida y eficiente.
+  </p>
+</mat-expansion-panel>
+
+<mat-expansion-panel
+  class="metodologias"
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Análisis Heurístico </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>
+    La evaluación heurística se trata de un método para determinar la usabilidad
+    de un sistema de interfaces sin usuarios reales, la cual es realizada por
+    una serie de expertos a partir de unos principios de usabilidad
+    establecidos. Este método consiste en: identificar el problema, definir el
+    plan para solucionarlo, realizar dicho plan y analizar el resultado que se
+    obtiene.
+  </p>
+  <p>
+    El principal objetivo es medir, a través de una serie de comprobaciones, la
+    calidad de la interfaz de cualquier aplicativo en función de la facilidad en
+    la que los usuarios la usen por primera vez, cómo se manejan con ella y cómo
+    la han aprendido. De esta manera obtenemos una serie de resultados que
+    contienen los problemas potenciales del aplicativo a nivel de usabilidad,
+    con la intención de inspeccionarlos, predecir errores futuros y hacer
+    propuestas de mejora.
+  </p>
+</mat-expansion-panel>
+
+<mat-expansion-panel
+  class="herramientas"
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      10 Principios heurístico de Jakob Nielsen
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>
+    Jakob Nielsen, considerado el padre de la usabilidad, define usabilidad como
+    atributo de calidad que evalúa cuán fácil son de usar las interfaces de
+    usuario. Las buenas prácticas en el diseño de interfaz web se apoyan en la
+    obra más famosa de este autor, está obra es “10 Usability Heuristics for
+    User Interface Design”. A continuación, se nombra cada uno de los principios
+    heurísticos de Nielsen
+  </p>
+  <ul>
+    <li>Visibilidad del estatus del sistema</li>
+    <li>Relación entre el sistema y el mundo real</li>
+    <li>Control y libertad del usuario</li>
+    <li>Consistencia y estándares</li>
+    <li>Prevención de errores</li>
+    <li>Reconocimiento en lugar de recuerdo</li>
+    <li>Flexibilidad y eficiencia de uso</li>
+    <li>Diseño estético y minimalista</li>
+    <li>Ayudar a reconocer, diagnosticar y recuperarse de errores</li>
+    <li>Ayuda y documentación</li>
+  </ul>
+</mat-expansion-panel>

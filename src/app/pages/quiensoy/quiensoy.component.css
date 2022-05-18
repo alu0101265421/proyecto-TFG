@@ -17,3 +17,21 @@ section {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+img {
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.yo {
+  position: relative;
+  margin-top: 80px;
+  margin-right: 500px;
+  float: right;
+  width: 400px;
+  height: 200px;
+}
+
+.ajuste {
+  align-items: center;
+}

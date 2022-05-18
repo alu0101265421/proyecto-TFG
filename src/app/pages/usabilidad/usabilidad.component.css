@@ -21,3 +21,14 @@ section {
 .subtitulo {
   color: rgb(26, 26, 26);
 }
+
+mat-expansion-panel-header {
+  background-color: #b7cadb;
+  font-weight: bold;
+}
+mat-expansion-panel {
+  margin: 20px;
+}
+p {
+  padding: 5px;
+}
