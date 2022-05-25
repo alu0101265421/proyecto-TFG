@@ -58,25 +58,6 @@ const routes: Routes = [
   { path: 'uxmadrid', component: UxMadridComponent },
   { path: 'uxsenado', component: UxSenadoComponent },
   { path: 'uxvalencia', component: UxValenciaComponent },
-  /*   {
-    path: 'sidenav',
-    children: [
-      {
-        path: 'canarias',
-        loadChildren: () =>
-          import(
-            './pages/estadisticas/canarias/est-canarias/est-canarias.module'
-          ).then((m) => m.EstCanariasModule),
-      },
-      {
-        path: 'andalucia',
-        loadChildren: () =>
-          import(
-            './pages/estadisticas/andalucia/est-andalucia/est-andalucia.module'
-          ).then((m) => m.EstAndaluciaModule),
-      },
-    ],
-  }, */
 ];
 
 @NgModule({

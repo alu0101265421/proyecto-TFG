@@ -9,6 +9,9 @@ export interface IAnalisisResult {
   categories: {
     error: ICategory;
     alert: ICategory;
+    feature: ICategory;
+    structure: ICategory;
+    aria: ICategory;
   };
   statistics: {
     pagetitle: string;

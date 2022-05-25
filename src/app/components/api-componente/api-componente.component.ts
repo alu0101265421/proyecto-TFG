@@ -8,7 +8,6 @@ import {
 } from 'src/app/services/api.service';
 
 import result from '../../services/result.json';
-import { from } from 'rxjs';
 
 export interface IGrafica {
   name: string;
@@ -22,18 +21,11 @@ export interface IGrafica {
 })
 export class ApiComponenteComponent implements OnInit {
   public direccion: string = '';
-
-  private result!: IDocResult | null;
-  public titulo2!: string;
-  public guias!: IGuideline[];
-  public panelOpenState = false;
   public resultadosAnalisisWeb!: IAnalisisResult | null;
-  public alerts!: any[];
-  public errors!: any[];
-  public analisis: ICategoria[] = [];
   public resultadosTraducidos: ICategoria[] = [];
 
   public showSpinner = false;
+  public panelOpenState = false;
 
   grafica!: IGrafica[];
 
@@ -52,7 +44,7 @@ export class ApiComponenteComponent implements OnInit {
 
     if (!this.resultadosAnalisisWeb?.categories) return;
 
-    console.log(this.resultadosAnalisisWeb);
+    /* console.log(this.resultadosAnalisisWeb); */
 
     const categories = Object.values(this.resultadosAnalisisWeb.categories);
 
