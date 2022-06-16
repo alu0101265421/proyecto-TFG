@@ -1,27 +1,29 @@
-# ProyectoTFG
+# Trabajo de Fin de Grado (TFG) - Accesibilidad Web y Experiencia de Usuario en los Parlamentos Autonómicos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+## Autor
 
-## Development server
+Elena Rijo García: <alu0101265421@ull.edu.es>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Resumen
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Se desarrolla un aplicativo web que contiene las soluciones propuestas para el caso de estudio del Trabajo de Fin de Grado. De esta manera, a través de un modelo de APIs (API WAVE Y PageSpeed Insight) se comprueba, por un lado la validación de los criterios de accesibilidad disponibles, y por otro lado el rango en el que se encuentran las métricas analizadas para la experiencia de usuario. La información obtenida ha sido procesada y posteriormente maquetada para su visualización. Además, el aplicativo contiene las gráficas dinámicas que se generan en el estudio previo de las herramientas automáticas de accesibilidad, así como información sobre accesibilidad y usabilidad.
 
-## Build
+### Aplicación desplegada
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Visualización del aplicativo web en Firebase (https://proyecto-tfg-aa18a.web.app/home)
 
-## Running unit tests
+### Ejecución de forma local
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
-## Running end-to-end tests
+Ejecute `ng serve` para el servidor de desarrollo. Navegue a `http://localhost:4200/`. La aplicación se recarga automáticamente si realiza algún cambio en los ficheros.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## Institución
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Centro docente: Universidad de La Laguna
+- Escuela Superior de Informática y Tecnología ULL
+- Carrera universitaria: Grado en Ingeniería Informáticacapabilities.
