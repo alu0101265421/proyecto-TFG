@@ -78,7 +78,6 @@ export class ApiService {
           )
           .pipe(take(1))
       );
-      /* return Promise.resolve(result as unknown as IAnalisisResult); */
     } catch (error) {
       console.error(error);
       return null;
